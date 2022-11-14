@@ -1,0 +1,20 @@
+.titulo-principal {
+    color: #4972b0;
+    font-weight: 700;
+}
+
+.barra-busqueda {
+    width: 50%;
+}
+
+.boton-buscar {
+    background-color: #4972b0;
+    color: white;
+    font-weight: 700;
+    width: 50%;
+}
+
+.table-headers {
+    color: #4972b0;
+    font-weight: 700;
+}

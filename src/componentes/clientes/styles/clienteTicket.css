@@ -1,0 +1,59 @@
+.principal {
+    width: 800px;
+    height: 800px;
+}
+
+.formulario-tickets {
+    margin-top: 2%;
+    align-items: center;
+    justify-self: center;
+    padding: auto;
+    width: 100%;
+}
+
+.encabezado-cliente-ticket {
+    color: #4972b0;
+    font-weight: 900;
+}
+
+/*.asunto-seccion, .descripcion-seccion {
+    margin-left: 8px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}*/
+
+.etiqueta-asunto, .etiqueta-descripcion {
+    color: #4972b0;
+    font-weight: 700;
+}
+
+.asunto-entrada {
+    color: #0041A3;
+    font-weight: 700;
+    width: 700px;
+}
+
+.entrada-grande {
+    color:  #4972b0;
+    font-weight: 600;
+    width: 700px;
+    margin-bottom: 0.5cm;
+}
+
+.crear-ticket {
+    background-color: #4972b0;
+    color: aliceblue;
+    font-weight: 700;
+    margin-bottom: 0.5cm;
+}
+
+.modal-title {
+    color:  #4972b0;
+    font-weight: 900;
+}
+
+.modal-body {
+    color: black;
+    font-weight: 700;
+}

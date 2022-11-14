@@ -1,0 +1,25 @@
+.principal-empleados {
+    width: "100%";
+    position: "relative";
+    height: "85%"
+}
+
+.titulo-login-empleados {
+    color: #4972b0;
+    font-weight: 700;
+}
+
+.saludo {
+    color: #4972b0;
+    font-weight: 600;
+}
+
+.ingreso-credenciales {
+    color: black;
+    font-weight: 500;
+}
+
+.imagen-login-empleados {
+    width: 35%;
+    height: 35%;
+}

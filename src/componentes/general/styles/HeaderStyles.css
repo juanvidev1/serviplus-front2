@@ -1,0 +1,25 @@
+.header-landing {
+    background-color: #4972b0;
+    width: 100%;
+}
+
+.nombre-usuario {
+    color: white;
+    font-weight: 700;
+}
+
+.link {
+    font-weight: 700;
+}
+
+.imagen-header {
+    width: 8%;
+    height: 8%;
+}
+
+.regresar-boton {
+    background-color: #4972b0;
+    color: aliceblue;
+    font-weight: 700;
+    border: 0;
+}
