@@ -9,7 +9,7 @@ const TicketsCliente = () => {
 
     const [ estado, setEstado ] = useState(Estados.CARGANDO);
     const [ ticketsCliente, setTicketsCliente ] = useState([]);
-    const [ criterio, setCriterio ] = useState("");
+    // const [ criterio, setCriterio ] = useState("");
     const { usuario, setUsuario } = useContext(ContextoUsuario);
 
     const revisarSesion = () => {

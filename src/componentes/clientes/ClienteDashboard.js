@@ -15,7 +15,8 @@ const ContenidoDashCliente = () => {
           const sesionUsuario = {
               nombres: sessionStorage.getItem("nombres"),
               estadoLogin: parseInt(sessionStorage.getItem("estadoLogin")),
-              id: sessionStorage.getItem("id")
+              id: sessionStorage.getItem("id"),
+              identificacion: sessionStorage.getItem("identificacion")
           }
           console.log(usuario);
           setUsuario(sesionUsuario);
