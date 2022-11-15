@@ -1,6 +1,8 @@
 import Imagenes from "../../assets/img/imagenes"
 import './styles/tickettarjeta.css'
+
 const TarjetaTicketCliente = ({ ticketCliente }) => {
+
     return (
         <>
         <div className="col-3 mb-2">

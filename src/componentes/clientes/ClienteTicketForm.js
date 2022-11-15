@@ -44,7 +44,7 @@ const ClienteTicketForm = () => {
         event.preventDefault();
         try {
             const ticket = {
-                fecha: Date.now(),
+                fecha: Date(new Date().toLocaleDateString({ weekday:"long", year:"numeric", month:"short"})),
                 servicio: {
                     nombre: nombreServicio,
                     descripcion: descripcionServicio,
