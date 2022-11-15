@@ -17,14 +17,14 @@ const Footer = () => {
                 <img className="img-fluid" src={Imagenes.facebook} alt="" width={"15%"} height={"15%"}></img></a>
 
             <a
-                className="boton-imagen btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
                 <img className="img-fluid" src={Imagenes.twitter} alt="" width={"15%"} height={"35%"}></img></a>
 
             <a
-                className="boton-imagen btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
@@ -32,21 +32,21 @@ const Footer = () => {
 
 
             <a
-                className="boton-imagen btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
                 <img className="img-fluid" src={Imagenes.instagram} alt="" width={"15%"} height={"35%"}></img></a>
 
             <a
-                className="boton-imagen btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
                 <img className="img-fluid" src={Imagenes.linkedin} alt="" width={"10%"} height={"40%"}></img></a>
             
             <a
-                className="boton-imagen btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
