@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container pt-4">
             <section className="mb-4 d-flex flex-row">
             <a
-                className="btn btn-link btn-floating btn-lg text-dark m-1"
+                className="boton-imagen btn-link btn-floating btn-lg text-dark m-1"
                 href="#!"
                 role="button"
                 data-mdb-ripple-color="dark">
