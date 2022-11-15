@@ -101,7 +101,7 @@ const FormularioCliente = () => {
           setMensaje("Ocurrió un error " + error);
         }
       } else {
-        setMensaje("Las contraseñas no coinciden");
+        setMensaje("El correo o la contraseña no coinciden");
       }
     }
 

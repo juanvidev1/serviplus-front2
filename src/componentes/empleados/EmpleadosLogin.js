@@ -18,6 +18,8 @@ const LoginEmpleados = () => {
     const crearSesion = (datosPerfil) => {
         sessionStorage.setItem("nombres", datosPerfil.nombres);
         sessionStorage.setItem("estadoLogin", datosPerfil.estadoLogin);
+        sessionStorage.setItem("username", datosPerfil.username);
+        sessionStorage.setItem("email", datosPerfil.email);
         setUsuario(datosPerfil);
     }
 
@@ -32,14 +34,18 @@ const LoginEmpleados = () => {
             const datosPerfil = {
                 id: result.data.id,
                 nombres: result.data.nombres,
+                username: result.data.username,
+                email: result.data.email,
                 estadoLogin: result.data.admin ? EstadosLogin.ADMIN_LOGIN : EstadosLogin.ASESOR_LOGIN
             }
             console.log(usuario);
             crearSesion(datosPerfil);
             if (datosPerfil.estadoLogin === EstadosLogin.ADMIN_LOGIN) {
                 navigateTo("/adminDashboard");
-            } else {
+            } else if (datosPerfil.estadoLogin === EstadosLogin.ASESOR_LOGIN) {
                 navigateTo("/asesorDashboard");
+            } else {
+                navigateTo("/empleados");
             }
         } catch (error) {
             if (error.status === 401) {

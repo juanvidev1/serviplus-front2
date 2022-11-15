@@ -34,6 +34,11 @@ const Header = () => {
         navigateTo("/clienteDashboard");
     }
 
+    const volverEmpleado = () => {
+        revisarSesion();
+        navigateTo("/empleados");
+    }
+
     useEffect(() => {
         revisarSesion();
     }, [])
@@ -78,7 +83,7 @@ const Header = () => {
                     usuario.estadoLogin === EstadosLogin.ADMIN_LOGIN ? (
                     <>            
                         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-end mb-md-0">
-                            <li><a href="/" className="link nav-link px-2 text-white">Regresar</a></li>
+                            <li><button type="text" onClick={volverEmpleado} className="regresar-boton px-2 text-white">Regresar</button></li>
                         </ul>
                         <div className="text-end">
                             <span className='nombre-usuario'>{usuario.nombres}</span>
@@ -88,19 +93,20 @@ const Header = () => {
                     
                     :
                     
-                    (
+                    usuario.estadoLogin === EstadosLogin.ASESOR_LOGIN ? (
                         <>
-                            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                                <li><a href="/" className="link nav-link px-2 text-white">Inicio</a></li>
-                                <li><a href="/clientes/form" className="link nav-link px-2 text-white">Genera un ticket</a></li>
-                                <li><a href="/about-serviplus" className="link nav-link px-2 text-white">Acerca de ServiPlus</a></li>
-                                <li><a href="/empleados" className="link nav-link px-2 text-white">Acceso empleados</a></li>
+                            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-end mb-md-0">
+                                <li><button type="text" onClick={volverEmpleado} className="regresar-boton px-2 text-white">Regresar</button></li>
                             </ul>
                             <div className="text-end">
-                                <a href='/clientes/form' type='button' className='btn btn-warning'>Registrarse</a>
+                                <span className='nombre-usuario'>{usuario.nombres}</span>
                             </div>
                         </>
                     )
+
+                    :
+
+                    <></>
 
                     /*location.pathname === "/clientes/form" ? (
                     <>

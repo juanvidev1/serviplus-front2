@@ -27,9 +27,15 @@ const Sidebar = () => {
   }
 
   const cerrarSesion = () => {
-    sessionStorage.clear();
-    revisarSesion();
-    navigateTo("/");
+    if (usuario.estadoLogin === EstadosLogin.ADMIN_LOGIN) {
+      sessionStorage.clear();
+      revisarSesion();
+      navigateTo("/empleados");
+    } else {
+      sessionStorage.clear();
+      revisarSesion();
+      navigateTo("/");
+    }
   }
 
   const editarDatos = () => {
@@ -48,6 +54,16 @@ const Sidebar = () => {
     navigateTo("/clienteticketform")
   }
 
+  const gestionEmpleados = () => {
+    revisarSesion();
+    navigateTo("/gestionempleados")
+  }
+
+  const gestionTickets = () => {
+    revisarSesion();
+    navigateTo("/gestiontickets");
+  }
+
   useEffect(() => {
     revisarSesion();
   }, [])
@@ -64,8 +80,8 @@ const Sidebar = () => {
           {
             usuario.estadoLogin === EstadosLogin.ADMIN_LOGIN ? (
               <ul className="list-unstyled">
-                <li><a href="/asesores" type="button" className="btn btn-md btn-warning mt-3 mb-3">Empleados</a></li>
-                <li><a href="/tablaclientes" type="button" className="btn btn-md btn-warning mt-3 mb-3">Tickets</a></li>
+                <li><button onClick={gestionEmpleados} type="button" className="btn btn-md btn-warning mt-3 mb-3">Empleados</button></li>
+                <li><button onClick={gestionTickets} type="button" className="btn btn-md btn-warning mt-3 mb-3">Tickets</button></li>
                 <li><a href="/tablaclientes" type="button" className="btn btn-md btn-warning mt-3 mb-3">Clientes</a></li>
               </ul>
             )

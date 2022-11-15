@@ -16,6 +16,9 @@ import ticket2 from "./ticket2icon.svg";
 import dashcliente from "./dashcliente.svg";
 import usuarioicon from "./person-circle.svg";
 import ticketicon from "./ticket-detailed.svg";
+import empleadosForm from './empleadosForm.svg';
+import empleadosIcon from './people-fill.svg';
+import iconoGesEmpleados from './person-vcard-fill.svg';
 
 const Imagenes = {
     "img1": logo,
@@ -35,7 +38,10 @@ const Imagenes = {
     "ticket2": ticket2,
     "dashcliente": dashcliente,
     "usuarioicon": usuarioicon,
-    "ticketicon": ticketicon
+    "ticketicon": ticketicon,
+    "empleadosForm": empleadosForm,
+    "empleadosIcon": empleadosIcon,
+    "gestionEmpleados": iconoGesEmpleados
 }
 
 export default Imagenes;
