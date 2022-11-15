@@ -198,10 +198,10 @@ const FormEmpleados = () => {
                             <label className="etiquetas-empleados">Area*</label>
                             <input className="form-control form-control-sm mb-2" onChange={cambiarArea} value={area} id="area" name="area" /> 
                         </div>
-                        <div className="me-2 mt-1 mb-1 btn btn-primary form-control form-control-sm text-white" type="button" align="center">
-                            <button onClick={guardarEmpleado} className="btn" id="registro-empleado" name="registro-empleado">{boton}</button>
+                        <div className="me-2 mt-1 mb-1" type="button" align="center">
+                            <button onClick={guardarEmpleado} className="btn btn-primary form-control form-control-sm text-white" id="registro-empleado" name="registro-empleado">{boton}</button>
                         </div>
-                        <div id="mensaje"><p className="parrafo mt-3" align="center"><button onClick={cancelar}>Cancelar</button></p></div>
+                        <div id="mensaje"><p className="parrafo mt-3" align="center"><button className="btn btn-danger form-control form-control-sm text-white" onClick={cancelar}>Cancelar</button></p></div>
                         <div id="mensaje">{mensaje}</div>
                     </div>
                 </form>

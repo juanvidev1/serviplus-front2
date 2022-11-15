@@ -82,7 +82,7 @@ const Sidebar = () => {
               <ul className="list-unstyled">
                 <li><button onClick={gestionEmpleados} type="button" className="btn btn-md btn-warning mt-3 mb-3">Empleados</button></li>
                 <li><button onClick={gestionTickets} type="button" className="btn btn-md btn-warning mt-3 mb-3">Tickets</button></li>
-                <li><a href="/tablaclientes" type="button" className="btn btn-md btn-warning mt-3 mb-3">Clientes</a></li>
+                <li><button href="/tablaclientes" type="button" className="btn btn-md btn-warning mt-3 mb-3">Clientes</button></li>
               </ul>
             )
             :

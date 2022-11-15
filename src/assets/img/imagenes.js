@@ -19,6 +19,7 @@ import ticketicon from "./ticket-detailed.svg";
 import empleadosForm from './empleadosForm.svg';
 import empleadosIcon from './people-fill.svg';
 import iconoGesEmpleados from './person-vcard-fill.svg';
+import crearEmpleadoIcon from './person-add.svg';
 
 const Imagenes = {
     "img1": logo,
@@ -41,7 +42,8 @@ const Imagenes = {
     "ticketicon": ticketicon,
     "empleadosForm": empleadosForm,
     "empleadosIcon": empleadosIcon,
-    "gestionEmpleados": iconoGesEmpleados
+    "gestionEmpleados": iconoGesEmpleados,
+    "agregarEmpleado": crearEmpleadoIcon
 }
 
 export default Imagenes;

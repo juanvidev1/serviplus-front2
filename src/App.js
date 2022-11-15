@@ -3,7 +3,7 @@ import Header from "./componentes/general/Header";
 import Landing from "./componentes/general/Landing";
 import FormCliente from "./componentes/clientes/Formulario";
 import ListadoClientes from "./componentes/clientes/TablaClientes";
-import ListadoEmpleados from "./componentes/empleados/TablaEmpleados";
+import DashListaEmpleados from "./componentes/empleados/DashListaEmpleados";
 import LoginEmpleados from "./componentes/empleados/EmpleadosLogin"; 
 import Footer from "./componentes/general/Footer";
 import ClienteDashboard from "./componentes/clientes/Dashboard";
@@ -35,12 +35,12 @@ function App() {
            <Route path="/clientes/form" element= {<FormCliente />} exact></Route>
            <Route path="/adminDashboard" element= {<AdminDashboard />} exact></Route>
            <Route path="/tablaclientes" element={<ListadoClientes />} exact></Route>
-           <Route path="/tablaempleados" element={<ListadoEmpleados />} exact></Route>
            <Route path="/clienteDashboard" element={<ClienteDashboard />} exact></Route>
            <Route path="/clientes/form/:id" element= {<DbEditarDatosCliente />} exact></Route>
            <Route path="/clienteticketform" element={<DbCrearTicket />} exact></Route>
            <Route path="/ticketscliente" element={<DbTicketsCliente />} exact></Route>
            <Route path="/gestionempleados" element={<GestionEmpleados />} exact></Route>
+           <Route path="/gestionempleados/listado" element={<DashListaEmpleados />} exact></Route>
            <Route path="/creacionempleado" element={<DashRegistroEmpleados />} exact></Route>
            <Route path="/pruebascomponentes" element={<FormEmpleados />} exact></Route>
          </Routes>     

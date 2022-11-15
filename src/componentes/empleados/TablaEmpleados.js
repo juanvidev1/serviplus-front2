@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Estados from "../../enums/Estados";
+import { ContextoUsuario } from "../../servicios/ContextoUsuario";
 import EmpleadosServicios from "../../servicios/ServicioEmpleado";
+import EstadosLogin from "../../enums/EstadoLogin";
 import './styles/tablaEmpleados.css';
 
 
@@ -11,6 +13,21 @@ const ListadoEmpleados = () => {
     const [ empleadosListado, setEmpleadosListado ] = useState([]);
     const [ estado, setEstado ] = useState(Estados.CARGANDO);
     const [ criterio, setCriterio ] = useState("");
+    const { usuario, setUsuario } = useContext(ContextoUsuario);
+
+    const revisarSesion = () => {
+        if (sessionStorage.getItem("estadoLogin") != null) {
+            const sesionUsuario = {
+                nombres: sessionStorage.getItem("nombres"),
+                estadoLogin: parseInt(sessionStorage.getItem("estadoLogin")),
+                id: sessionStorage.getItem("id"),
+                identificacion: sessionStorage.getItem("identificacion")
+            }
+            setUsuario(sesionUsuario); 
+        } else {
+            setUsuario({nombres: "", estadoLogin: EstadosLogin.NO_LOGIN});
+        }
+    }
 
     const cargarEmpleados = async () => {
         try {
@@ -56,6 +73,7 @@ const ListadoEmpleados = () => {
     }*/
 
     useEffect(() => {
+        revisarSesion();
         cargarEmpleados();
     }, [])
 

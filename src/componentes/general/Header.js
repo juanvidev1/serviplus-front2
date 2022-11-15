@@ -36,7 +36,7 @@ const Header = () => {
 
     const volverEmpleado = () => {
         revisarSesion();
-        navigateTo("/empleados");
+        navigateTo("/adminDashboard");
     }
 
     useEffect(() => {

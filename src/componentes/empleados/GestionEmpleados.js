@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import Imagenes from "../../assets/img/imagenes";
 import { ContextoUsuario } from "../../servicios/ContextoUsuario";
 import EstadosLogin from "../../enums/EstadoLogin";
+import "./styles/gestionEmpleados.css";
 
 const GestionEmpleados = () => {
     const navigateTo = useNavigate();
@@ -55,7 +56,7 @@ const GestionEmpleados = () => {
             align="left"
             style={{ color: "black", fontWeight: "700" }}
             >
-                Apreciado administrador
+                Apreciado {usuario.nombres}
             </h2>
             <p
             className="ps-4"
@@ -73,7 +74,7 @@ const GestionEmpleados = () => {
                 className="container shadow p-3 mb-5 bg-body rounded"
                 align="center"
                 >
-                    <img alt="" src={Imagenes.ticket1} width="50" height="50" />
+                    <img alt="" src={Imagenes.agregarEmpleado} className="imagen-estilo" />
                     <br />
                     <button
                     className="btn mt-3"
@@ -94,7 +95,7 @@ const GestionEmpleados = () => {
             className="container shadow p-3 mb-5 bg-body rounded"
             align="center"
             >
-                <img alt="" src={Imagenes.ticket2} width="50" height="50" />
+                <img alt="" src={Imagenes.empleadosIcon} className="imagen-estilo" />
                 <br />
                 <button
                 className="btn mt-3"
@@ -105,7 +106,7 @@ const GestionEmpleados = () => {
                 }}
                 onClick={listarEmpleados}
                 >
-                    Mis Tickets
+                    Lista empleados
                 </button>
             </div>
         </div>
